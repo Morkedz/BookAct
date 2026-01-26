@@ -1,0 +1,14 @@
+venv/
+env/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.DS_Store
+.directory
+.Trash/
+config.json
+secrets.py
+*.key
