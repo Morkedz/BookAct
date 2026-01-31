@@ -4,7 +4,7 @@ from time import sleep
 
 colors = ["red","green","blue","magenta","cyan","yellow","white","black"]
 
-led_light = RGBLED(13,17,20)
+led_light = RGBLED(18,17,27)
 
 def loop_light():
     while True:

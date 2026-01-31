@@ -4,7 +4,7 @@ from signal import pause
 
 red = LED(18)
 tilt = Button(17)
-green = LED(21)
+green = LED(27)
 
 red.on()
 green.off()

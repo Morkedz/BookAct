@@ -1,7 +1,7 @@
 from gpiozero import Button, MCP3008
 from time import sleep
 
-flame_act = Button(18)
+flame_act = Button(17)
 flame_pin = MCP3008(channel = 0)
 
 def loop():

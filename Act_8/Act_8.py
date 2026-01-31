@@ -2,7 +2,7 @@ from gpiozero import Button
 from gpiozero import LED
 from signal import pause
 
-green = LED(21)
+green = LED(27)
 red = LED(18)
 vibrate = Button(17)
 

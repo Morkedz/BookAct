@@ -10,7 +10,7 @@ x_data = []
 y_data = []
 
 mag = Button(17)
-green = LED(20)
+green = LED(27)
 red = LED(18)
 
 red.on()

@@ -4,7 +4,7 @@ from signal import pause
 
 touch=Button(17)
 red = LED(18)
-green=LED(19)
+green=LED(27)
 
 red.on()
 green.off()
