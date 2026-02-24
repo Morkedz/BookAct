@@ -1,36 +1,14 @@
 #Stepmotor
 from time import sleep
-from gpiostepper import Stepper
+from RpiMotorimport RpiMotorLib
 
 speed = 300 #in rpm
 steps = 32
-motor = Stepper(motor_pins=[17,18,19,20], number_of_steps = steps)
-
-motor.set_speed(speed)
-gear_reduct = 64
-spr = steps * gear_reduct
-
-def rotary(clb_direction):
-    if clb_direction == "a":
-        motor.step(spr)
-        sleep(1)
-    elif clb_direction == "c":
-        motor.step(-spr)
-        sleep(1)
+motor = RpiMotorLib.BYJm_28BYJ48("stepper", "28BYJ48")
 
 def loop():
     while True:
-        clb_direction = input("Type 'a' for anticlockwise rotation, 'c' for clockwise")
-        if clb_direction == "a":
-            print("Running anticlockwise")
-            break
-        elif clb_direction == "c":
-            print("Running clockwise")
-            break
-        else:
-            print("Enter a valid input")
-    while True:
-        rotary(clb_direction)
+        motor.motor_run([17,18,19,20],.001,512,False, False, "half", .005)
 
 if __name__ == "__main__":
     try:
