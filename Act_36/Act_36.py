@@ -1,17 +1,18 @@
 #Stepmotor
-from time import sleep
-from RpiMotorimport RpiMotorLib
+import RPi.GPIO as GPIO
+from RpiMotorLib.RpiMotorLib import BYJMotor
 
-speed = 300 #in rpm
-steps = 32
-motor = RpiMotorLib.BYJm_28BYJ48("stepper", "28BYJ48")
+steps = 512
+pins = [17,18,19,20]
+motor = BYJMotor("stepper", "28BYJ48")
 
 def loop():
     while True:
-        motor.motor_run([17,18,19,20],.001,512,False, False, "half", .005)
+        motor.motor_run([17,18,19,20],.001,steps,False, False, "half", .005)
 
 if __name__ == "__main__":
     try:
         loop()
     except KeyboardInterrupt:
-        motor.close()
+        GPIO.output(pins, GPIO.LOW)
+        GPIO.cleanup()
