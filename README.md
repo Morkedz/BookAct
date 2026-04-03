@@ -3,3 +3,5 @@ Repository contains a set of Lesson plans derived from the book Mastering Raspbe
 
 ## Notes of Inquiry
 **February 23:** Familiarize with RpiMotorLib. Faced significant challenges operating library.
+**April 2:** 4 step sequence, 512 steps per revolution?
+**April 2:** Familiarize with I2C device real time clock.
